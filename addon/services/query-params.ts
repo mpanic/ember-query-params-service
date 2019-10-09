@@ -64,6 +64,8 @@ export default class QueryParamsService extends Service {
    *
    */
   private updateURL(transition: Transition) {
+    console.log('updateURL -> transition', transition);
+    debugger;
     const path = this.router.urlFor(transition.to.name);
     const { protocol, host, pathname, search, hash } = window.location;
     const queryParams = this.byPath[path];
